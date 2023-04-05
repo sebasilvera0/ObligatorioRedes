@@ -1,0 +1,36 @@
+C:\Users\molazabal\source\repos\PrimerSocket\Protocolo\bin\Debug\net6.0\Protocolo.deps.json
+C:\Users\molazabal\source\repos\PrimerSocket\Protocolo\bin\Debug\net6.0\Protocolo.dll
+C:\Users\molazabal\source\repos\PrimerSocket\Protocolo\bin\Debug\net6.0\Protocolo.pdb
+C:\Users\molazabal\source\repos\PrimerSocket\Protocolo\obj\Debug\net6.0\Protocolo.csproj.AssemblyReference.cache
+C:\Users\molazabal\source\repos\PrimerSocket\Protocolo\obj\Debug\net6.0\Protocolo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\molazabal\source\repos\PrimerSocket\Protocolo\obj\Debug\net6.0\Protocolo.AssemblyInfoInputs.cache
+C:\Users\molazabal\source\repos\PrimerSocket\Protocolo\obj\Debug\net6.0\Protocolo.AssemblyInfo.cs
+C:\Users\molazabal\source\repos\PrimerSocket\Protocolo\obj\Debug\net6.0\Protocolo.csproj.CoreCompileInputs.cache
+C:\Users\molazabal\source\repos\PrimerSocket\Protocolo\obj\Debug\net6.0\Protocolo.dll
+C:\Users\molazabal\source\repos\PrimerSocket\Protocolo\obj\Debug\net6.0\refint\Protocolo.dll
+C:\Users\molazabal\source\repos\PrimerSocket\Protocolo\obj\Debug\net6.0\Protocolo.pdb
+C:\Users\molazabal\source\repos\PrimerSocket\Protocolo\obj\Debug\net6.0\ref\Protocolo.dll
+D:\Prog de Redes\Clases pasadas\EjemploProtocoloCompleto\Protocolo\bin\Debug\net6.0\Protocolo.deps.json
+D:\Prog de Redes\Clases pasadas\EjemploProtocoloCompleto\Protocolo\bin\Debug\net6.0\Protocolo.dll
+D:\Prog de Redes\Clases pasadas\EjemploProtocoloCompleto\Protocolo\bin\Debug\net6.0\Protocolo.pdb
+D:\Prog de Redes\Clases pasadas\EjemploProtocoloCompleto\Protocolo\obj\Debug\net6.0\Protocolo.csproj.AssemblyReference.cache
+D:\Prog de Redes\Clases pasadas\EjemploProtocoloCompleto\Protocolo\obj\Debug\net6.0\Protocolo.GeneratedMSBuildEditorConfig.editorconfig
+D:\Prog de Redes\Clases pasadas\EjemploProtocoloCompleto\Protocolo\obj\Debug\net6.0\Protocolo.AssemblyInfoInputs.cache
+D:\Prog de Redes\Clases pasadas\EjemploProtocoloCompleto\Protocolo\obj\Debug\net6.0\Protocolo.AssemblyInfo.cs
+D:\Prog de Redes\Clases pasadas\EjemploProtocoloCompleto\Protocolo\obj\Debug\net6.0\Protocolo.csproj.CoreCompileInputs.cache
+D:\Prog de Redes\Clases pasadas\EjemploProtocoloCompleto\Protocolo\obj\Debug\net6.0\Protocolo.dll
+D:\Prog de Redes\Clases pasadas\EjemploProtocoloCompleto\Protocolo\obj\Debug\net6.0\refint\Protocolo.dll
+D:\Prog de Redes\Clases pasadas\EjemploProtocoloCompleto\Protocolo\obj\Debug\net6.0\Protocolo.pdb
+D:\Prog de Redes\Clases pasadas\EjemploProtocoloCompleto\Protocolo\obj\Debug\net6.0\ref\Protocolo.dll
+C:\Users\sebas\OneDrive\Desktop\Ort\EjemploProtocoloCompleto\Protocolo\bin\Debug\net6.0\Protocolo.deps.json
+C:\Users\sebas\OneDrive\Desktop\Ort\EjemploProtocoloCompleto\Protocolo\bin\Debug\net6.0\Protocolo.dll
+C:\Users\sebas\OneDrive\Desktop\Ort\EjemploProtocoloCompleto\Protocolo\bin\Debug\net6.0\Protocolo.pdb
+C:\Users\sebas\OneDrive\Desktop\Ort\EjemploProtocoloCompleto\Protocolo\obj\Debug\net6.0\Protocolo.csproj.AssemblyReference.cache
+C:\Users\sebas\OneDrive\Desktop\Ort\EjemploProtocoloCompleto\Protocolo\obj\Debug\net6.0\Protocolo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sebas\OneDrive\Desktop\Ort\EjemploProtocoloCompleto\Protocolo\obj\Debug\net6.0\Protocolo.AssemblyInfoInputs.cache
+C:\Users\sebas\OneDrive\Desktop\Ort\EjemploProtocoloCompleto\Protocolo\obj\Debug\net6.0\Protocolo.AssemblyInfo.cs
+C:\Users\sebas\OneDrive\Desktop\Ort\EjemploProtocoloCompleto\Protocolo\obj\Debug\net6.0\Protocolo.csproj.CoreCompileInputs.cache
+C:\Users\sebas\OneDrive\Desktop\Ort\EjemploProtocoloCompleto\Protocolo\obj\Debug\net6.0\Protocolo.dll
+C:\Users\sebas\OneDrive\Desktop\Ort\EjemploProtocoloCompleto\Protocolo\obj\Debug\net6.0\refint\Protocolo.dll
+C:\Users\sebas\OneDrive\Desktop\Ort\EjemploProtocoloCompleto\Protocolo\obj\Debug\net6.0\Protocolo.pdb
+C:\Users\sebas\OneDrive\Desktop\Ort\EjemploProtocoloCompleto\Protocolo\obj\Debug\net6.0\ref\Protocolo.dll

@@ -1,0 +1,69 @@
+C:\Users\molazabal\source\repos\PrimerSocket\PrimerSocket\bin\Debug\net6.0\Servidor.exe
+C:\Users\molazabal\source\repos\PrimerSocket\PrimerSocket\bin\Debug\net6.0\Servidor.deps.json
+C:\Users\molazabal\source\repos\PrimerSocket\PrimerSocket\bin\Debug\net6.0\Servidor.runtimeconfig.json
+C:\Users\molazabal\source\repos\PrimerSocket\PrimerSocket\bin\Debug\net6.0\Servidor.dll
+C:\Users\molazabal\source\repos\PrimerSocket\PrimerSocket\bin\Debug\net6.0\Servidor.pdb
+C:\Users\molazabal\source\repos\PrimerSocket\PrimerSocket\obj\Debug\net6.0\Servidor.csproj.AssemblyReference.cache
+C:\Users\molazabal\source\repos\PrimerSocket\PrimerSocket\obj\Debug\net6.0\Servidor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\molazabal\source\repos\PrimerSocket\PrimerSocket\obj\Debug\net6.0\Servidor.AssemblyInfoInputs.cache
+C:\Users\molazabal\source\repos\PrimerSocket\PrimerSocket\obj\Debug\net6.0\Servidor.AssemblyInfo.cs
+C:\Users\molazabal\source\repos\PrimerSocket\PrimerSocket\obj\Debug\net6.0\Servidor.csproj.CoreCompileInputs.cache
+C:\Users\molazabal\source\repos\PrimerSocket\PrimerSocket\obj\Debug\net6.0\Servidor.dll
+C:\Users\molazabal\source\repos\PrimerSocket\PrimerSocket\obj\Debug\net6.0\refint\Servidor.dll
+C:\Users\molazabal\source\repos\PrimerSocket\PrimerSocket\obj\Debug\net6.0\Servidor.pdb
+C:\Users\molazabal\source\repos\PrimerSocket\PrimerSocket\obj\Debug\net6.0\Servidor.genruntimeconfig.cache
+C:\Users\molazabal\source\repos\PrimerSocket\PrimerSocket\obj\Debug\net6.0\ref\Servidor.dll
+C:\Users\molazabal\source\repos\PrimerSocket\PrimerSocket\bin\Debug\net6.0\Protocolo.dll
+C:\Users\molazabal\source\repos\PrimerSocket\PrimerSocket\bin\Debug\net6.0\Protocolo.pdb
+C:\Users\molazabal\source\repos\PrimerSocket\PrimerSocket\obj\Debug\net6.0\Servidor.csproj.CopyComplete
+C:\Users\molazabal\source\repos\PrimerSocket\PrimerSocket\bin\Debug\net6.0\Cliente.deps.json
+C:\Users\molazabal\source\repos\PrimerSocket\PrimerSocket\bin\Debug\net6.0\Cliente.runtimeconfig.json
+C:\Users\molazabal\source\repos\PrimerSocket\PrimerSocket\bin\Debug\net6.0\Cliente.exe
+C:\Users\molazabal\source\repos\PrimerSocket\PrimerSocket\bin\Debug\net6.0\Cliente.dll
+C:\Users\molazabal\source\repos\PrimerSocket\PrimerSocket\bin\Debug\net6.0\Cliente.pdb
+D:\Prog de Redes\Clases pasadas\EjemploProtocoloCompleto\PrimerSocket\bin\Debug\net6.0\Cliente.deps.json
+D:\Prog de Redes\Clases pasadas\EjemploProtocoloCompleto\PrimerSocket\bin\Debug\net6.0\Cliente.runtimeconfig.json
+D:\Prog de Redes\Clases pasadas\EjemploProtocoloCompleto\PrimerSocket\bin\Debug\net6.0\Cliente.exe
+D:\Prog de Redes\Clases pasadas\EjemploProtocoloCompleto\PrimerSocket\bin\Debug\net6.0\Servidor.exe
+D:\Prog de Redes\Clases pasadas\EjemploProtocoloCompleto\PrimerSocket\bin\Debug\net6.0\Servidor.deps.json
+D:\Prog de Redes\Clases pasadas\EjemploProtocoloCompleto\PrimerSocket\bin\Debug\net6.0\Servidor.runtimeconfig.json
+D:\Prog de Redes\Clases pasadas\EjemploProtocoloCompleto\PrimerSocket\bin\Debug\net6.0\Servidor.dll
+D:\Prog de Redes\Clases pasadas\EjemploProtocoloCompleto\PrimerSocket\bin\Debug\net6.0\Servidor.pdb
+D:\Prog de Redes\Clases pasadas\EjemploProtocoloCompleto\PrimerSocket\bin\Debug\net6.0\Cliente.dll
+D:\Prog de Redes\Clases pasadas\EjemploProtocoloCompleto\PrimerSocket\bin\Debug\net6.0\Protocolo.dll
+D:\Prog de Redes\Clases pasadas\EjemploProtocoloCompleto\PrimerSocket\bin\Debug\net6.0\Cliente.pdb
+D:\Prog de Redes\Clases pasadas\EjemploProtocoloCompleto\PrimerSocket\bin\Debug\net6.0\Protocolo.pdb
+D:\Prog de Redes\Clases pasadas\EjemploProtocoloCompleto\PrimerSocket\obj\Debug\net6.0\Servidor.csproj.AssemblyReference.cache
+D:\Prog de Redes\Clases pasadas\EjemploProtocoloCompleto\PrimerSocket\obj\Debug\net6.0\Servidor.GeneratedMSBuildEditorConfig.editorconfig
+D:\Prog de Redes\Clases pasadas\EjemploProtocoloCompleto\PrimerSocket\obj\Debug\net6.0\Servidor.AssemblyInfoInputs.cache
+D:\Prog de Redes\Clases pasadas\EjemploProtocoloCompleto\PrimerSocket\obj\Debug\net6.0\Servidor.AssemblyInfo.cs
+D:\Prog de Redes\Clases pasadas\EjemploProtocoloCompleto\PrimerSocket\obj\Debug\net6.0\Servidor.csproj.CoreCompileInputs.cache
+D:\Prog de Redes\Clases pasadas\EjemploProtocoloCompleto\PrimerSocket\obj\Debug\net6.0\Servidor.csproj.CopyComplete
+D:\Prog de Redes\Clases pasadas\EjemploProtocoloCompleto\PrimerSocket\obj\Debug\net6.0\Servidor.dll
+D:\Prog de Redes\Clases pasadas\EjemploProtocoloCompleto\PrimerSocket\obj\Debug\net6.0\refint\Servidor.dll
+D:\Prog de Redes\Clases pasadas\EjemploProtocoloCompleto\PrimerSocket\obj\Debug\net6.0\Servidor.pdb
+D:\Prog de Redes\Clases pasadas\EjemploProtocoloCompleto\PrimerSocket\obj\Debug\net6.0\Servidor.genruntimeconfig.cache
+D:\Prog de Redes\Clases pasadas\EjemploProtocoloCompleto\PrimerSocket\obj\Debug\net6.0\ref\Servidor.dll
+C:\Users\sebas\OneDrive\Desktop\Ort\EjemploProtocoloCompleto\PrimerSocket\bin\Debug\net6.0\Cliente.deps.json
+C:\Users\sebas\OneDrive\Desktop\Ort\EjemploProtocoloCompleto\PrimerSocket\bin\Debug\net6.0\Cliente.runtimeconfig.json
+C:\Users\sebas\OneDrive\Desktop\Ort\EjemploProtocoloCompleto\PrimerSocket\bin\Debug\net6.0\Cliente.exe
+C:\Users\sebas\OneDrive\Desktop\Ort\EjemploProtocoloCompleto\PrimerSocket\bin\Debug\net6.0\Servidor.exe
+C:\Users\sebas\OneDrive\Desktop\Ort\EjemploProtocoloCompleto\PrimerSocket\bin\Debug\net6.0\Servidor.deps.json
+C:\Users\sebas\OneDrive\Desktop\Ort\EjemploProtocoloCompleto\PrimerSocket\bin\Debug\net6.0\Servidor.runtimeconfig.json
+C:\Users\sebas\OneDrive\Desktop\Ort\EjemploProtocoloCompleto\PrimerSocket\bin\Debug\net6.0\Servidor.dll
+C:\Users\sebas\OneDrive\Desktop\Ort\EjemploProtocoloCompleto\PrimerSocket\bin\Debug\net6.0\Servidor.pdb
+C:\Users\sebas\OneDrive\Desktop\Ort\EjemploProtocoloCompleto\PrimerSocket\bin\Debug\net6.0\Cliente.dll
+C:\Users\sebas\OneDrive\Desktop\Ort\EjemploProtocoloCompleto\PrimerSocket\bin\Debug\net6.0\Protocolo.dll
+C:\Users\sebas\OneDrive\Desktop\Ort\EjemploProtocoloCompleto\PrimerSocket\bin\Debug\net6.0\Cliente.pdb
+C:\Users\sebas\OneDrive\Desktop\Ort\EjemploProtocoloCompleto\PrimerSocket\bin\Debug\net6.0\Protocolo.pdb
+C:\Users\sebas\OneDrive\Desktop\Ort\EjemploProtocoloCompleto\PrimerSocket\obj\Debug\net6.0\Servidor.csproj.AssemblyReference.cache
+C:\Users\sebas\OneDrive\Desktop\Ort\EjemploProtocoloCompleto\PrimerSocket\obj\Debug\net6.0\Servidor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sebas\OneDrive\Desktop\Ort\EjemploProtocoloCompleto\PrimerSocket\obj\Debug\net6.0\Servidor.AssemblyInfoInputs.cache
+C:\Users\sebas\OneDrive\Desktop\Ort\EjemploProtocoloCompleto\PrimerSocket\obj\Debug\net6.0\Servidor.AssemblyInfo.cs
+C:\Users\sebas\OneDrive\Desktop\Ort\EjemploProtocoloCompleto\PrimerSocket\obj\Debug\net6.0\Servidor.csproj.CoreCompileInputs.cache
+C:\Users\sebas\OneDrive\Desktop\Ort\EjemploProtocoloCompleto\PrimerSocket\obj\Debug\net6.0\Servidor.csproj.CopyComplete
+C:\Users\sebas\OneDrive\Desktop\Ort\EjemploProtocoloCompleto\PrimerSocket\obj\Debug\net6.0\Servidor.dll
+C:\Users\sebas\OneDrive\Desktop\Ort\EjemploProtocoloCompleto\PrimerSocket\obj\Debug\net6.0\refint\Servidor.dll
+C:\Users\sebas\OneDrive\Desktop\Ort\EjemploProtocoloCompleto\PrimerSocket\obj\Debug\net6.0\Servidor.pdb
+C:\Users\sebas\OneDrive\Desktop\Ort\EjemploProtocoloCompleto\PrimerSocket\obj\Debug\net6.0\Servidor.genruntimeconfig.cache
+C:\Users\sebas\OneDrive\Desktop\Ort\EjemploProtocoloCompleto\PrimerSocket\obj\Debug\net6.0\ref\Servidor.dll
