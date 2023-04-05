@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yYLMuE9zD5AHUrousWnUn/twVF3dLgAlQB2Nuy4U9gphTd37VBOT+lY6zVhSRh6A6w5yPgmZIoNB9HhWFWzhlQ==",
+  "dgSpecHash": "52iWeGdc1/2hjs0y1KTmlwWCN+KDbW0OCPG/5QnNySZfrhQq96Kbccp6ytbm+jG0ZjeFt3QkMwPoneFiYiUT+A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sebas\\OneDrive\\Desktop\\Ort\\EjemploProtocoloCompleto\\PrimerSocket\\Servidor.csproj",
+  "projectFilePath": "C:\\Users\\sebas\\OneDrive\\Desktop\\Ort\\ObligatorioRedes\\EjemploProtocoloCompleto\\PrimerSocket\\Servidor.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
