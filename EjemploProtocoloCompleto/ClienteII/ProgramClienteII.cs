@@ -50,7 +50,11 @@ namespace Cliente2
                         Console.WriteLine("La conexión con el servidor se ha cortado");
                         exit = true;
                     }
+                    byte[] datosLargoMenu = manejoDataSocket.Receive(Constantes.LargoFijo);
+                    byte[] datosMenu = manejoDataSocket.Receive(BitConverter.ToInt32(datosLargoMenu));
 
+                    string mensajeMenu = $"El cliente dice {Encoding.UTF8.GetString(datosMenu)}";
+                    Console.WriteLine(mensajeMenu);
                 }
             }
 

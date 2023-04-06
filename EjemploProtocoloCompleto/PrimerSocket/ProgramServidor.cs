@@ -50,9 +50,19 @@ namespace PrimerSocket
                 {
                     byte[] datosLargo = manejoDataSocket.Receive(Constantes.LargoFijo);
                     byte[] datos = manejoDataSocket.Receive(BitConverter.ToInt32(datosLargo));
-                    
+
                     string mensaje = $"El cliente dice {Encoding.UTF8.GetString(datos)}";
                     Console.WriteLine(mensaje);
+
+                    String menus = "Esto es el menu";
+                    byte[] menu = Encoding.UTF8.GetBytes(menus);
+                    byte[] menuLargo = BitConverter.GetBytes(menu.Length);
+
+
+                    manejoDataSocket.Send(menuLargo); // Mando la parte fija (4 bytes)
+                    manejoDataSocket.Send(menu);
+
+
                 }
                 catch (SocketException e)
                 {
