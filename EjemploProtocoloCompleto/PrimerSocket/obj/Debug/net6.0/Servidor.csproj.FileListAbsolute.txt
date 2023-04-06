@@ -90,3 +90,5 @@ C:\Users\sebas\OneDrive\Desktop\Ort\ObligatorioRedes\EjemploProtocoloCompleto\Pr
 C:\Users\sebas\OneDrive\Desktop\Ort\ObligatorioRedes\EjemploProtocoloCompleto\PrimerSocket\obj\Debug\net6.0\Servidor.csproj.CopyComplete
 C:\Users\sebas\OneDrive\Desktop\Ort\ObligatorioRedes\EjemploProtocoloCompleto\PrimerSocket\obj\Debug\net6.0\Servidor.genruntimeconfig.cache
 C:\Users\sebas\OneDrive\Desktop\Ort\ObligatorioRedes\EjemploProtocoloCompleto\PrimerSocket\obj\Debug\net6.0\ref\Servidor.dll
+C:\Users\sebas\OneDrive\Desktop\Ort\ObligatorioRedes\EjemploProtocoloCompleto\PrimerSocket\bin\Debug\net6.0\Domain.dll
+C:\Users\sebas\OneDrive\Desktop\Ort\ObligatorioRedes\EjemploProtocoloCompleto\PrimerSocket\bin\Debug\net6.0\Domain.pdb

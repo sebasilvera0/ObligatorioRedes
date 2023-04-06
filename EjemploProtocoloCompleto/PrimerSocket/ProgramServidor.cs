@@ -3,7 +3,6 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using Domain;
-
 namespace PrimerSocket
 {
     internal class ProgramServidor
@@ -49,24 +48,10 @@ namespace PrimerSocket
             {
                 try
                 {
-                    String primerMensajeS = "Usuario:";
-                    byte[] primerMensaje = Encoding.UTF8.GetBytes(primerMensajeS);
-                    byte[] primerMensajeLargo = BitConverter.GetBytes(primerMensaje.Length);
-                    manejoDataSocket.Send(primerMensajeLargo); // Mando la parte fija (4 bytes)
-                    manejoDataSocket.Send(primerMensaje);
-                    byte[] datosLargo = manejoDataSocket.Receive(Constantes.LargoFijo);
-                    byte[] datos = manejoDataSocket.Receive(BitConverter.ToInt32(datosLargo));
 
-                    string idUsuario = $"{Encoding.UTF8.GetString(datos)}";
-                    String segundoMensajeS = "Usuario:";
-                    byte[] segundoMensaje = Encoding.UTF8.GetBytes(segundoMensajeS);
-                    byte[] segundoMensajeLargo = BitConverter.GetBytes(segundoMensaje.Length);
-                    manejoDataSocket.Send(segundoMensajeLargo); // Mando la parte fija (4 bytes)
-                    manejoDataSocket.Send(segundoMensaje);
-                    byte[] datosLargo2 = manejoDataSocket.Receive(Constantes.LargoFijo);
-                    byte[] datos2 = manejoDataSocket.Receive(BitConverter.ToInt32(datosLargo2));
+                    String password = "";
 
-                    string password = $"{Encoding.UTF8.GetString(datos2)}";
+                    String idUsuario = "";
 
                     if (LoginUsuario(idUsuario, password))
                     {

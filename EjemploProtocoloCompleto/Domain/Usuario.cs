@@ -7,7 +7,7 @@ using System.Xml.Linq;
 
 namespace Domain
 {
-    internal class Usuario
+    public  class Usuario
     {
         public String Name { get; set; }
         public String Password { get; set; }
