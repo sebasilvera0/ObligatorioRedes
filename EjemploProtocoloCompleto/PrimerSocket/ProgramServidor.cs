@@ -2,6 +2,7 @@
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using Domain;
 
 namespace PrimerSocket
 {
@@ -48,17 +49,39 @@ namespace PrimerSocket
             {
                 try
                 {
-                    MuestroMenuPrincipal(manejoDataSocket, false);
-
+                    String primerMensajeS = "Usuario:";
+                    byte[] primerMensaje = Encoding.UTF8.GetBytes(primerMensajeS);
+                    byte[] primerMensajeLargo = BitConverter.GetBytes(primerMensaje.Length);
+                    manejoDataSocket.Send(primerMensajeLargo); // Mando la parte fija (4 bytes)
+                    manejoDataSocket.Send(primerMensaje);
                     byte[] datosLargo = manejoDataSocket.Receive(Constantes.LargoFijo);
                     byte[] datos = manejoDataSocket.Receive(BitConverter.ToInt32(datosLargo));
 
-                    string mensaje = $"El cliente dice {Encoding.UTF8.GetString(datos)}";
-                    Console.WriteLine(mensaje);
+                    string idUsuario = $"{Encoding.UTF8.GetString(datos)}";
+                    String segundoMensajeS = "Usuario:";
+                    byte[] segundoMensaje = Encoding.UTF8.GetBytes(segundoMensajeS);
+                    byte[] segundoMensajeLargo = BitConverter.GetBytes(segundoMensaje.Length);
+                    manejoDataSocket.Send(segundoMensajeLargo); // Mando la parte fija (4 bytes)
+                    manejoDataSocket.Send(segundoMensaje);
+                    byte[] datosLargo2 = manejoDataSocket.Receive(Constantes.LargoFijo);
+                    byte[] datos2 = manejoDataSocket.Receive(BitConverter.ToInt32(datosLargo2));
 
-                    
+                    string password = $"{Encoding.UTF8.GetString(datos2)}";
 
+                    if (LoginUsuario(idUsuario, password))
+                    {
+                        MuestroMenuPrincipal(manejoDataSocket, false);
 
+                        byte[] datosLargo = manejoDataSocket.Receive(Constantes.LargoFijo);
+                        byte[] datos = manejoDataSocket.Receive(BitConverter.ToInt32(datosLargo));
+
+                        string mensaje = $"El cliente dice {Encoding.UTF8.GetString(datos)}";
+                        Console.WriteLine(mensaje);
+                    }
+                    else
+                    {
+
+                    }
                 }
                 catch (SocketException e)
                 {
@@ -67,6 +90,12 @@ namespace PrimerSocket
 
             }
             Console.WriteLine("Cliente desconectado");
+        }
+
+        static bool LoginUsuario(String idUsuario , String password)
+        {
+            Persistencia pers = new Domain.Persistencia();
+            return pers.ValidarCredenciales(idUsuario, password);
         }
 
 
@@ -82,7 +111,7 @@ namespace PrimerSocket
                                "7. Consultar un repuesto específico.\n" +
                                "8. Enviar y recibir mensajes entre mecánicos.\n" +
                                "9. Configuración.\n" +
-                               "10. Exit";
+                               "10. Exit.";
             byte[] menu = Encoding.UTF8.GetBytes(menus);
             byte[] menuLargo = BitConverter.GetBytes(menu.Length);
 
