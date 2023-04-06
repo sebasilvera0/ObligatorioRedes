@@ -48,19 +48,15 @@ namespace PrimerSocket
             {
                 try
                 {
+                    MuestroMenuPrincipal(manejoDataSocket, false);
+
                     byte[] datosLargo = manejoDataSocket.Receive(Constantes.LargoFijo);
                     byte[] datos = manejoDataSocket.Receive(BitConverter.ToInt32(datosLargo));
 
                     string mensaje = $"El cliente dice {Encoding.UTF8.GetString(datos)}";
                     Console.WriteLine(mensaje);
 
-                    String menus = "Esto es el menu";
-                    byte[] menu = Encoding.UTF8.GetBytes(menus);
-                    byte[] menuLargo = BitConverter.GetBytes(menu.Length);
-
-
-                    manejoDataSocket.Send(menuLargo); // Mando la parte fija (4 bytes)
-                    manejoDataSocket.Send(menu);
+                    
 
 
                 }
@@ -71,6 +67,28 @@ namespace PrimerSocket
 
             }
             Console.WriteLine("Cliente desconectado");
+        }
+
+
+        static void MuestroMenuPrincipal(ManejoDataSocket manejoDataSocket , Boolean esAdmin)
+        {
+            String menus = "Menu Principal \n" +
+                               "1. Dar de Alta a un usuario.\n" +
+                               "2. Dar de Alta a un repuesto.\n" +
+                               "3. Crear Categoría de repuesto.\n" +
+                               "4. Asociar Categorías a un repuesto.\n" +
+                               "5. Asociar una foto al repuesto.\n" +
+                               "6. Consultar repuestos existentes.\n" +
+                               "7. Consultar un repuesto específico.\n" +
+                               "8. Enviar y recibir mensajes entre mecánicos.\n" +
+                               "9. Configuración.\n" +
+                               "10. Exit";
+            byte[] menu = Encoding.UTF8.GetBytes(menus);
+            byte[] menuLargo = BitConverter.GetBytes(menu.Length);
+
+
+            manejoDataSocket.Send(menuLargo); // Mando la parte fija (4 bytes)
+            manejoDataSocket.Send(menu);
         }
     }
 }
