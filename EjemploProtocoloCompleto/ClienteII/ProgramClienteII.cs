@@ -25,8 +25,9 @@ namespace Cliente2
             socketCliente.Connect(endpointServidor);
             Console.WriteLine("Conexión establecida");
 
-            Console.WriteLine("Escriba un meensaje para el Servidor");
-
+            Console.WriteLine("Escriba su Usuario");
+            string usuario = Console.ReadLine();
+            Console.WriteLine("Escriba su Contraseña");
             bool exit = false;
             ManejoDataSocket manejoDataSocket = new ManejoDataSocket(socketCliente);
             byte[] datosLargoMenu = manejoDataSocket.Receive(Constantes.LargoFijo);

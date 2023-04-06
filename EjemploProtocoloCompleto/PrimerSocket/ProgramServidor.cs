@@ -53,7 +53,7 @@ namespace PrimerSocket
 
                     String idUsuario = "";
 
-                    if (LoginUsuario(idUsuario, password))
+                    if (!LoginUsuario(idUsuario, password))
                     {
                         MuestroMenuPrincipal(manejoDataSocket, false);
 
