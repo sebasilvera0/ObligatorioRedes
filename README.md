@@ -65,3 +65,14 @@ su historial de mensajes.
 - CRF9. Configuración. Se deberá ser capaz de modificar los puertos e ip utilizados por el
 cliente y la clave del usuario admin sin necesidad de recompilar el proyecto. Dichos valores
 no deben estar “hardcodeados” en el código.
+
+**Especificación de protocolo**
+1. El siguiente protocolo es una sugerencia, los estudiantes pueden (y deberían) hacer cambios al
+mismo.
+2. Protocolo orientado a caracteres.
+3. Implementado sobre TCP/IP.
+4. Los valores deberán ir alineados a la derecha, los bytes de relleno deberán tener el valor 0.
+5. Los campos HEADER, CMD y LARGO tendrán largo fijo. El campo DATOS tendrá largo variable, según
+el valor indicado en LARGO.
+6. Formato general de la trama.
+<img width="497" alt="Captura de pantalla 2023-04-11 a la(s) 17 33 04" src="https://user-images.githubusercontent.com/80791547/231281751-8b4eae98-ada2-4051-b377-47f12bca9f95.png">
