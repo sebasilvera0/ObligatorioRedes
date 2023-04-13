@@ -24,10 +24,17 @@ namespace Cliente2
             // 5- Establezco conexión con el socket y el endpoint remoto (Servidor)
             socketCliente.Connect(endpointServidor);
             Console.WriteLine("Conexión establecida");
-            Console.WriteLine("Escriba un meensaje para el Servidor");
 
+            Console.WriteLine("Escriba su Usuario");
+            string usuario = Console.ReadLine();
+            Console.WriteLine("Escriba su Contraseña");
             bool exit = false;
             ManejoDataSocket manejoDataSocket = new ManejoDataSocket(socketCliente);
+            byte[] datosLargoMenu = manejoDataSocket.Receive(Constantes.LargoFijo);
+            byte[] datosMenu = manejoDataSocket.Receive(BitConverter.ToInt32(datosLargoMenu));
+
+            string mensajeMenu = $"{Encoding.UTF8.GetString(datosMenu)}";
+            Console.WriteLine(mensajeMenu);
             while (!exit)
             {
                 string mensaje = Console.ReadLine();
@@ -50,7 +57,7 @@ namespace Cliente2
                         Console.WriteLine("La conexión con el servidor se ha cortado");
                         exit = true;
                     }
-
+                   Console.WriteLine(mensajeMenu);
                 }
             }
 

@@ -15,6 +15,16 @@
           "bin/placeholder/Cliente.dll": {}
         }
       },
+      "Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Domain.dll": {}
+        }
+      },
       "Protocolo/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -33,6 +43,11 @@
       "path": "../Cliente2/Cliente.csproj",
       "msbuildProject": "../Cliente2/Cliente.csproj"
     },
+    "Domain/1.0.0": {
+      "type": "project",
+      "path": "../Domain/Domain.csproj",
+      "msbuildProject": "../Domain/Domain.csproj"
+    },
     "Protocolo/1.0.0": {
       "type": "project",
       "path": "../Protocolo/Protocolo.csproj",
@@ -41,7 +56,8 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Cliente >= 1.0.0"
+      "Cliente >= 1.0.0",
+      "Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -73,6 +89,9 @@
           "projectReferences": {
             "C:\\Users\\sebas\\OneDrive\\Desktop\\Ort\\ObligatorioRedes\\EjemploProtocoloCompleto\\Cliente2\\Cliente.csproj": {
               "projectPath": "C:\\Users\\sebas\\OneDrive\\Desktop\\Ort\\ObligatorioRedes\\EjemploProtocoloCompleto\\Cliente2\\Cliente.csproj"
+            },
+            "C:\\Users\\sebas\\OneDrive\\Desktop\\Ort\\ObligatorioRedes\\EjemploProtocoloCompleto\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\sebas\\OneDrive\\Desktop\\Ort\\ObligatorioRedes\\EjemploProtocoloCompleto\\Domain\\Domain.csproj"
             }
           }
         }
