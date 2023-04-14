@@ -11,30 +11,17 @@ namespace PrimerSocket
         static void Main(string[] args)
         {
             Console.WriteLine("Iniciando Servidor");
-            // 1- Se crea el Socket del servidor
-            var socketServidor = new Socket(
-                AddressFamily.InterNetwork, 
-                SocketType.Stream, 
-                ProtocolType.Tcp);
-
-            // 2- Creamos un EndPoint con Ip = localHost + Puerto
+            var socketServidor = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             var endPointServidor = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 20000);
-
-            // 3- Asociamos el socket con el EndPoint por medio del Bind
             socketServidor.Bind(endPointServidor);
-
-            // 4- Ponemos el socket en modo escucha
             socketServidor.Listen(10);
 
             int clientesConectados = 0;
-
             while (clientesConectados < cantClientes)
             {
-                // 5- Aceptamos N conexiones
-                var socketCliente = socketServidor.Accept(); //Bloquea el hilo principal del Servidor, queda esperando por una conexión de un Cliente
+                var socketCliente = socketServidor.Accept();
                 Console.WriteLine("Cliente conectado!");
                 clientesConectados++;
-                // Disparamos un hilo para manejar cada Cliente
                 new Thread(() => ManejoCliente(socketCliente)).Start();
             }
             Console.ReadLine();
@@ -48,31 +35,23 @@ namespace PrimerSocket
             {
                 try
                 {
-
                     String password = "";
-
                     String idUsuario = "";
 
                     if (!LoginUsuario(idUsuario, password))
                     {
                         MuestroMenuPrincipal(manejoDataSocket, false);
-
-                        byte[] datosLargo = manejoDataSocket.Receive(Constantes.LargoFijo);
-                        byte[] datos = manejoDataSocket.Receive(BitConverter.ToInt32(datosLargo));
-
-                        string mensaje = $"El cliente dice {Encoding.UTF8.GetString(datos)}";
-                        Console.WriteLine(mensaje);
+                        ManejoMenu(manejoDataSocket);
                     }
-                    else
-                    {
-
-                    }
+                    // else
+                    // {
+                    //
+                    // }
                 }
                 catch (SocketException e)
                 {
                     clienteConectado = false;
                 }
-
             }
             Console.WriteLine("Cliente desconectado");
         }
@@ -82,7 +61,6 @@ namespace PrimerSocket
             Persistencia pers = new Domain.Persistencia();
             return pers.ValidarCredenciales(idUsuario, password);
         }
-
 
         static void MuestroMenuPrincipal(ManejoDataSocket manejoDataSocket , Boolean esAdmin)
         {
@@ -99,10 +77,58 @@ namespace PrimerSocket
                                "10. Exit.";
             byte[] menu = Encoding.UTF8.GetBytes(menus);
             byte[] menuLargo = BitConverter.GetBytes(menu.Length);
-
-
-            manejoDataSocket.Send(menuLargo); // Mando la parte fija (4 bytes)
+            
+            manejoDataSocket.Send(menuLargo);
             manejoDataSocket.Send(menu);
+        }
+
+        static void ManejoMenu(ManejoDataSocket manejoDataSocket)
+        {
+            byte[] headLargo = manejoDataSocket.Receive(Constantes.HeadFijo);
+            byte[] cmdLargo = manejoDataSocket.Receive(Constantes.CmdFijo);
+            //byte[] datosLargo = manejoDataSocket.Receive(Constantes.LargoFijo);
+            
+            byte[] head = manejoDataSocket.Receive(BitConverter.ToInt32(headLargo));
+            byte[] cmd = manejoDataSocket.Receive(BitConverter.ToInt32(cmdLargo));
+            //byte[] datos = manejoDataSocket.Receive(BitConverter.ToInt32(datosLargo));
+
+            string headCmd = $"{Encoding.UTF8.GetString(head)} + {Encoding.UTF8.GetString(cmd)}";
+            // string mensaje = $"{Encoding.UTF8.GetString(datos)}";
+            // string[] mensajeDecodificado = mensaje.Split("#");
+
+            switch (headCmd)
+            {
+                case "REQ01":
+                    //1. Dar de Alta a un usuario
+                    break;
+                case "REQ02":
+                    //2. Dar de Alta a un repuesto.
+                    break;
+                case "REQ03":
+                    //3. Crear Categoría de repuesto.
+                    break;
+                case "REQ04":
+                    //4. Asociar Categorías a un repuesto.
+                    break;
+                case "REQ05":
+                    //5. Asociar una foto al repuesto.
+                    break;
+                case "REQ06":
+                    //6. Consultar repuestos existentes.
+                    break;
+                case "REQ07":
+                    //7. Consultar un repuesto específico.
+                    break;
+                case "REQ08":
+                    //8. Enviar y recibir mensajes entre mecánicos.
+                    break;
+                case "REQ09":
+                    //9. Configuración.
+                    break;
+                case "REQ10":
+                    //10. Exit.
+                    break;
+            }
         }
     }
 }

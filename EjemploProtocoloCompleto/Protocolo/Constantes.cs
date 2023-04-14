@@ -9,5 +9,7 @@ namespace Protocolo
     public static class Constantes
     {
         public const int LargoFijo = 4;
+        public const int HeadFijo = 3;
+        public const int CmdFijo = 2;
     }
 }
