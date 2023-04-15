@@ -14,10 +14,7 @@ namespace Protocolo
         int LargoEnBytes;
 
 
-     public  NuestroProtocolo(String codigo , String mensaje)
-        {
-            mensajeEnProtocolo = codigo + mensaje.Length + mensaje;
-        }
+     
     }
 
     

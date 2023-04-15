@@ -3,6 +3,8 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using Domain;
+using Servidor;
+
 namespace PrimerSocket
 {
     internal class ProgramServidor
@@ -89,9 +91,12 @@ namespace PrimerSocket
                     byte[] datosLargo = manejoDataSocket.Receive(Constantes.LargoFijo);
                     byte[] datos = manejoDataSocket.Receive(BitConverter.ToInt32(datosLargo));
 
+                    string mensaje = Encoding.UTF8.GetString(datos);
 
+                    ManejoDeConsultas mj = new ManejoDeConsultas();
+                  bool valor  = mj.ManejoDeConsultasSer(mensaje);
 
-                    if (!LoginUsuario(idUsuario, password))
+                    if (valor)
                     {
                         MuestroMenuPrincipal(manejoDataSocket, false);
 
