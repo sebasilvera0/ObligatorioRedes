@@ -77,6 +77,46 @@ namespace PrimerSocket
             Console.WriteLine("Cliente desconectado");
         }
 
+        static void ManejoCliente2(Socket socketCliente)
+        {
+            bool clienteConectado = true;
+            ManejoDataSocket manejoDataSocket = new ManejoDataSocket(socketCliente);
+            while (clienteConectado)
+            {
+                try
+                {
+
+                    byte[] datosLargo = manejoDataSocket.Receive(Constantes.LargoFijo);
+                    byte[] datos = manejoDataSocket.Receive(BitConverter.ToInt32(datosLargo));
+
+
+
+                    if (!LoginUsuario(idUsuario, password))
+                    {
+                        MuestroMenuPrincipal(manejoDataSocket, false);
+
+                        byte[] datosLargo = manejoDataSocket.Receive(Constantes.LargoFijo);
+                        byte[] datos = manejoDataSocket.Receive(BitConverter.ToInt32(datosLargo));
+
+                        string mensaje = $"El cliente dice {Encoding.UTF8.GetString(datos)}";
+                        Console.WriteLine(mensaje);
+                    }
+                    else
+                    {
+
+                    }
+                }
+                catch (SocketException e)
+                {
+                    clienteConectado = false;
+                }
+
+            }
+            Console.WriteLine("Cliente desconectado");
+        }
+
+
+
         static bool LoginUsuario(String idUsuario , String password)
         {
             Persistencia pers = new Domain.Persistencia();

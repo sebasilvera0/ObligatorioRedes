@@ -1,12 +1,11 @@
-﻿
-using Protocolo;
-using System.Net;
+﻿using Protocolo;
 using System.Net.Sockets;
+using System.Net;
 using System.Text;
 
 namespace Cliente3
 {
-    internal class ProgramClienteII
+    internal class ProgramCliente
     {
         static void Main(string[] args)
         {
@@ -24,19 +23,18 @@ namespace Cliente3
             // 5- Establezco conexión con el socket y el endpoint remoto (Servidor)
             socketCliente.Connect(endpointServidor);
             Console.WriteLine("Conexión establecida");
-
-            Console.WriteLine("Escriba su Usuario#Contrasena");
+            Console.WriteLine("Escriba su Usuario#Contraseña");
             string usuario = Console.ReadLine();
+
+            SendMessage sendMessage = new SendMessage();
+            //Mandamos el mensaje AL Servidor
+            sendMessage.SendMessageToServer("R01",usuario,socketCliente);
             
 
+            Console.WriteLine("Escriba un meensaje para el Servidor");
 
             bool exit = false;
             ManejoDataSocket manejoDataSocket = new ManejoDataSocket(socketCliente);
-            byte[] datosLargoMenu = manejoDataSocket.Receive(Constantes.LargoFijo);
-            byte[] datosMenu = manejoDataSocket.Receive(BitConverter.ToInt32(datosLargoMenu));
-
-            string mensajeMenu = $"{Encoding.UTF8.GetString(datosMenu)}";
-            Console.WriteLine(mensajeMenu);
             while (!exit)
             {
                 string mensaje = Console.ReadLine();
@@ -59,7 +57,7 @@ namespace Cliente3
                         Console.WriteLine("La conexión con el servidor se ha cortado");
                         exit = true;
                     }
-                    Console.WriteLine(mensajeMenu);
+
                 }
             }
 
