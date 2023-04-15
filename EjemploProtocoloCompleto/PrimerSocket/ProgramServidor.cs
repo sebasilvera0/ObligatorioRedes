@@ -4,6 +4,7 @@ using System.Net.Sockets;
 using System.Text;
 using Domain;
 using Servidor;
+using System.Runtime.CompilerServices;
 
 namespace PrimerSocket
 {
@@ -51,60 +52,17 @@ namespace PrimerSocket
                 try
                 {
 
-                    String password = "";
-
-                    String idUsuario = "";
-
-                    if (!LoginUsuario(idUsuario, password))
-                    {
-                        MuestroMenuPrincipal(manejoDataSocket, false);
-
-                        byte[] datosLargo = manejoDataSocket.Receive(Constantes.LargoFijo);
-                        byte[] datos = manejoDataSocket.Receive(BitConverter.ToInt32(datosLargo));
-
-                        string mensaje = $"El cliente dice {Encoding.UTF8.GetString(datos)}";
-                        Console.WriteLine(mensaje);
-                    }
-                    else
-                    {
-
-                    }
-                }
-                catch (SocketException e)
-                {
-                    clienteConectado = false;
-                }
-
-            }
-            Console.WriteLine("Cliente desconectado");
-        }
-
-        static void ManejoCliente2(Socket socketCliente)
-        {
-            bool clienteConectado = true;
-            ManejoDataSocket manejoDataSocket = new ManejoDataSocket(socketCliente);
-            while (clienteConectado)
-            {
-                try
-                {
-
                     byte[] datosLargo = manejoDataSocket.Receive(Constantes.LargoFijo);
                     byte[] datos = manejoDataSocket.Receive(BitConverter.ToInt32(datosLargo));
 
                     string mensaje = Encoding.UTF8.GetString(datos);
 
                     ManejoDeConsultas mj = new ManejoDeConsultas();
-                  bool valor  = mj.ManejoDeConsultasSer(mensaje);
+                    String loginUser  = mj.ManejoDeConsultasSer(mensaje);
+                    MuestroMenuPrincipal(manejoDataSocket, loginUser);
 
-                    if (valor)
-                    {
-                        MuestroMenuPrincipal(manejoDataSocket, false);
-
-                        byte[] datosLargo = manejoDataSocket.Receive(Constantes.LargoFijo);
-                        byte[] datos = manejoDataSocket.Receive(BitConverter.ToInt32(datosLargo));
-
-                        string mensaje = $"El cliente dice {Encoding.UTF8.GetString(datos)}";
-                        Console.WriteLine(mensaje);
+                    if (1==1)
+                    {  
                     }
                     else
                     {
@@ -121,33 +79,51 @@ namespace PrimerSocket
         }
 
 
-
-        static bool LoginUsuario(String idUsuario , String password)
+        static void MuestroMenuPrincipal(ManejoDataSocket manejoDataSocket , String loginUser)
         {
-            Persistencia pers = new Domain.Persistencia();
-            return pers.ValidarCredenciales(idUsuario, password);
-        }
+            String respuestaAEnviar = "";
+            String stringOpcionaladmin = "";
+            String menus = "";
+            try { 
+                if(loginUser == null)
+                {
+                    throw new Exception("Usuario nulo");
+                }
+               
+                if (loginUser.Equals("404"))
+                {
+                    respuestaAEnviar = "R00404";
+                    menus = "Usuario o contraseña incorrectas";
+                }
+                else 
+                {
+                    respuestaAEnviar = "R00200";
 
+                    if (loginUser.Equals("200Admin")) { 
+                        stringOpcionaladmin = "0. Dar de Alta a un usuario.\n";
+                    }
+                     menus = "Menu Principal \n"
+                               + stringOpcionaladmin +
+                            "1. Dar de Alta a un repuesto.\n" +
+                            "2. Crear Categoría de repuesto.\n" +
+                            "3. Asociar Categorías a un repuesto.\n" +
+                            "4. Asociar una foto al repuesto.\n" +
+                            "5. Consultar repuestos existentes.\n" +
+                            "6. Consultar un repuesto específico.\n" +
+                            "7. Enviar y recibir mensajes entre mecánicos.\n" +
+                            "8. Configuración.\n" +
+                            "9. Exit.";
 
-        static void MuestroMenuPrincipal(ManejoDataSocket manejoDataSocket , Boolean esAdmin)
-        {
-            String menus = "Menu Principal \n" +
-                               "1. Dar de Alta a un usuario.\n" +
-                               "2. Dar de Alta a un repuesto.\n" +
-                               "3. Crear Categoría de repuesto.\n" +
-                               "4. Asociar Categorías a un repuesto.\n" +
-                               "5. Asociar una foto al repuesto.\n" +
-                               "6. Consultar repuestos existentes.\n" +
-                               "7. Consultar un repuesto específico.\n" +
-                               "8. Enviar y recibir mensajes entre mecánicos.\n" +
-                               "9. Configuración.\n" +
-                               "10. Exit.";
-            byte[] menu = Encoding.UTF8.GetBytes(menus);
-            byte[] menuLargo = BitConverter.GetBytes(menu.Length);
-
-
-            manejoDataSocket.Send(menuLargo); // Mando la parte fija (4 bytes)
-            manejoDataSocket.Send(menu);
+                }          
+                byte[] menu = Encoding.UTF8.GetBytes(menus);
+                byte[] menuLargo = BitConverter.GetBytes(menu.Length);
+                manejoDataSocket.Send(menuLargo); 
+                manejoDataSocket.Send(menu);
+            }
+            catch(Exception ex)
+            {
+            }
+          
         }
     }
 }

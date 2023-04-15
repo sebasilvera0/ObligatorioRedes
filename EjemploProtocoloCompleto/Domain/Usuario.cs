@@ -11,14 +11,14 @@ namespace Domain
     {
         public String NombreUsuario { get; set; }
         public String Contrasena { get; set; }
-      
+        public bool EsAdmin { get; set; }
 
 
-        public Usuario(String name, String password)
+        public Usuario(String name, String password , bool esAdmin)
         {
             NombreUsuario = name;
             Contrasena = password;
-         
+            EsAdmin = esAdmin;
         }
     }
 }

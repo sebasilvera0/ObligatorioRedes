@@ -12,15 +12,18 @@ namespace Domain
 
         public DBMemory()
         {
-            Usuario us = new Usuario("Juan", "Juan");
+            Usuario us = new Usuario("Juan", "Juan",false);
+            listaUsuarios.Add(new Usuario("user1", "123",false));
+            listaUsuarios.Add(new Usuario("user2", "abc", false));
+            listaUsuarios.Add(new Usuario("admin", "admin", true));
             listaUsuarios.Add(us);
         }
 
-        public bool logginUser(String user, String contrasena)
+        public Usuario logginUser(String user, String contrasena)
         {
             Usuario usuarioEncontrado = listaUsuarios.FirstOrDefault(u => u.NombreUsuario == user && u.Contrasena == contrasena);
 
-            return usuarioEncontrado != null;
+            return usuarioEncontrado;
 
         }
 

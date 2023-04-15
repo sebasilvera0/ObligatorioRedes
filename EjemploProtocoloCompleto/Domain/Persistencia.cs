@@ -14,27 +14,9 @@ namespace Domain
         public Persistencia()
         {
             // Agregar usuarios a la lista
-            _usuarios.Add(new Usuario("user1", "123"));
-            _usuarios.Add(new Usuario("user2", "abc"));
+            
         }
 
-        public  bool ValidarCredenciales(string usuario, string password)
-        {
-             foreach (var u in _usuarios)
-            {
-                if (u.Name == usuario)
-                {
-                     if (u.Password == password)
-                    {
-                         return true;
-                    }
-                    else
-                    {
-                          return false;
-                    }
-                }
-            }
-             return false;
-        }
+        
     }
 }

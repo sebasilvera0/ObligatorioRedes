@@ -12,9 +12,6 @@ namespace Protocolo
         String mensajeEnProtocolo;
         String Codigo;
         int LargoEnBytes;
-
-
-     
     }
 
     
